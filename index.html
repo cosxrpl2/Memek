@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jangan lupa login</title>
+    <link rel="icon" href="./img/foto1.jpg" style="width: 200px; height: 200px; border-radius: 90px;">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.yoo {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    box-shadow: -5px -5px 6px #ff8955,
+                10px 10px 16px #ffa96a;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.wkwk {
+    padding: 17px 130px;
+    border: none;
+    border-radius: 25px;
+    background-color: #80ffff;
+    color: #eaeaff;
+}
+
+
+.wkwk:hover {
+    box-shadow: 2px 2px 2px #ffffff,
+    2px 2px 2px #00000026;
+}
+
+
+#message {
+    color: red;
+    margin-top: 10px;
+}
+
+#berhasil {
+    color: green;
+    margin-top: 10px;
+}
+
+.left {
+   padding: 17px 130px;
+    border: none;
+    border-radius: 25px;
+    background-color: #80ffff;
+    color: #eaeaff;
+}
+
+.p a{
+   margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #333;
+  border: none;
+}
+
+p a:hover {
+   color: #8098ff;
+}
+    </style>
+</head>
+<body>
+    <div class="yoo">
+        <img src="./img/foto1.jpg" alt="" style="width: 150px; height: 150px; border-radius: 100px">
+        <h1>GunturTuner</h1>
+        <form id="loginForm">
+            <label for="username">Nama:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Sandi:</label>
+            <input type="password" id="password" name="password" required>
+            <button class="wkwk" type="submit">Login</button>
+        </form>
+        </br>
+        <div class="p">
+           <a href="login2.html" target="_blank">Ganti akun</a>
+        </div>
+        
+        <h2><p id="message"></p></h2>
+        <h2><p id="berhasil"></p></h2>
+    </div>
+    
+    <script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    //jangan lupa makan bu😋
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    //nah ini password nya bu
+    
+    const correctUsername = "GunturTuner";
+    const correctPassword = "S";
+
+    if (username === "" || password === "") {
+        document.getElementById("message").textContent = "Jangan dikosongin nohh!";
+    } else if (username !== correctUsername || password !== correctPassword) {
+        document.getElementById("message").textContent = "Awokawokawok, salah ya!!";
+    } else {
+        document.getElementById("berhasil").textContent = "Login berhasil!";#0e00cc
+        // mengarahkan ke halaman lain
+        window.location.href = "home1.html";
+        
+         //langsung ke website saya
+    }
+});
+    </script>
+</body>
+</html>
